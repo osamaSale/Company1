@@ -1,0 +1,11 @@
+{
+  "name": "6--chunk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "chunk.js",
+  "scripts": {
+    "dev": "nodemon chunk.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

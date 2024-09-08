@@ -1,0 +1,11 @@
+{
+  "name": "9--check-word",
+  "version": "1.0.0",
+  "description": "",
+  "main": "checkWord.js",
+  "scripts": {
+    "dev": "nodemon checkWord.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

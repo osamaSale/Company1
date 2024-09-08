@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        /*
+        String Search :>
+        JavaScript methods for searching strings:
+
+        String.indexOf()
+        String.lastIndexOf()
+        String.startsWith()
+        String.endsWith()
+        */
+
+        //String.indexOf()
+        // The indexOf() method returns the index of(the position of) the first occurrence of a specified text in a string:
+
+        //Example
+        let str = "Please locate where 'locate' occurs!";
+        str.indexOf("locate");    // Returns 7
+
+
+        //String.lastIndexOf()
+        //The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+
+        //Example
+        let strrr = "Please locate where 'locate' occurs!";
+        strrr.lastIndexOf("locate")    // Returns 21
+
+
+        //String.search()
+        //The search() method searches a string for a specified value and returns the position of the match:
+
+        //Example
+        let str1 = "Please locate where 'locate' occurs!";
+        str1.search("locate")     // Returns 7
+
+
+        //The includes() method returns true if a string contains a specified value.
+
+        //Example
+        let text = "Hello world, welcome to the universe.";
+        text.includes("world")    // Returns true
+
+
+        //String Methods and Properties
+
+        //But with JavaScript, methods and properties are also available to primitive values, 
+        //because JavaScript treats primitive values as objects when executing methods and properties.
+
+        //String Length
+        //The length property returns the length of a string:
+
+        //Example
+        let txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        txt.length     // Returns 26
+
+
+        //Extracting String Parts
+        //There are 3 methods for extracting a part of a string:
+
+        //slice(start, end)
+        //substring(start, end)
+        //substr(start, length)
+
+        /* The slice() Method
+        
+        slice() extracts a part of a string and returns the extracted part in a new string.
+
+         The method takes 2 parameters: the start position, and the end position (end not included).
+        */
+        let str2 = "Apple, Banana, Kiwi";
+        str2.slice(7, 13)     // Returns Banana
+        str2.slice(7);    // Returns Banana,Kiwi
+
+
+        //The substring() Method
+        //substring() is similar to slice().
+
+        //The difference is that substring() cannot accept negative indexes.
+
+        let str3 = "Apple, Banana, Kiwi";
+        //substring(7, 13)    // Returns Banana
+
+
+        // The substr() Method
+        // substr() is similar to slice().
+
+        //The difference is that the second parameter specifies the length of the extracted part.
+
+        let str4 = "Apple, Banana, Kiwi";
+        str4.substr(7, 6)    // Returns Banana
+
+
+        //Replacing String Content
+        //The replace() method replaces a specified value with another value in a string:
+
+        //Example
+        let text1 = "Please visit Microsoft!";
+        let newText = text1.replace("Microsoft", "W3Schools");
+        //The replace() method does not change the string it is called on.It returns a new string.
+
+        //By default, the replace() method replaces only the first match:
+
+        //Example
+        let text2 = "Please visit Microsoft and Microsoft!";
+        let newText1 = text2.replace("Microsoft", "W3Schools");
+
+
+        //By default, the replace() method is case sensitive.Writing MICROSOFT(with upper -case) will not work:
+
+        //Example
+        let text3 = "Please visit Microsoft!";
+        let newText2 = text3.replace("MICROSOFT", "W3Schools");
+
+
+
+        //Converting to Upper and Lower Case
+        //A string is converted to upper case with toUpperCase():
+
+        //Example
+        let text5 = "Hello World!";       // String
+        let text7 = text5.toUpperCase();  // text2 is text1 converted to upper
+
+
+        //A string is converted to lower case with toLowerCase():
+
+        //Example
+        let text9 = "Hello World!";       // String
+        let textt = text9.toLowerCase();
+
+
+        //The concat() method can be used instead of the plus operator.These two lines do the same:
+
+        //Example
+        let textC = "Hello" + " " + "World!";
+        textC = "Hello".concat(" ", "World!");
+        console.log('------------------------------------');
+        console.log(textC);
+        console.log('------------------------------------');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

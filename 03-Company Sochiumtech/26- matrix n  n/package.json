@@ -1,0 +1,11 @@
+{
+  "name": "26--matrix-n-n",
+  "version": "1.0.0",
+  "description": "",
+  "main": "matrix.js",
+  "scripts": {
+    "dev": "nodemon matrix n n.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

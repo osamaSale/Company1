@@ -1,0 +1,11 @@
+{
+  "name": "23--check-number",
+  "version": "1.0.0",
+  "description": "",
+  "main": "checkNumber.js",
+  "scripts": {
+    "dev": "nodemon checkNumber.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

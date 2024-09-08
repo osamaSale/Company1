@@ -1,0 +1,11 @@
+{
+  "name": "2-longer-string",
+  "version": "1.0.0",
+  "description": "",
+  "main": "longer.js",
+  "scripts": {
+    "dev": "nodemon longer.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

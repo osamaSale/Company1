@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        console.log('------------------------------------');
+        console.log("JavaScript Classes");
+        console.log('------------------------------------');
+        //JavaScript Classes 
+
+        //are templates for JavaScript Objects.
+
+
+        // Syntax
+        /*
+         class ClassName {
+             constructor() { ... }
+         }
+         */
+        class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+        }
+        let myCar1 = new Car("Ford", 2014);
+        let myCar2 = new Car("Audi", 2019);
+        console.log('------------------------------------');
+        console.log(myCar1);
+        console.log('------------------------------------');
+
+
+        // Class Methods
+        /*
+        Syntax
+        class ClassName {
+            constructor() { ... }
+            method_1() { ... }
+            method_2() { ... }
+            method_3() { ... }
+        }
+        */
+
+
+        class Car1 {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+            age() {
+                let date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+        let myCar3 = new Car1("Ford", 2014);
+        console.log('------------------------------------');
+        console.log(myCar3);
+        console.log('------------------------------------');
+    </script>>
+</head>
+
+</html>

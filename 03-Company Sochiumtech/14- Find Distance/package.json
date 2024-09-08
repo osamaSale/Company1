@@ -1,0 +1,11 @@
+{
+  "name": "14--find-distance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Find Distance.js",
+  "scripts": {
+    "dev": "nodemon Find Distance.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

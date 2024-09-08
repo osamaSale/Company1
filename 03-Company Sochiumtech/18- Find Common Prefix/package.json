@@ -1,0 +1,11 @@
+{
+  "name": "18--find-common-prefix",
+  "version": "1.0.0",
+  "main": "CommonPrefix.js",
+  "scripts": {
+    "dev": "nodemon CommonPrefix.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

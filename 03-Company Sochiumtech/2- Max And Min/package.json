@@ -1,0 +1,11 @@
+{
+  "name": "2--max-and-min",
+  "version": "1.0.0",
+  "description": "",
+  "main": "max.js",
+  "scripts": {
+    "dev": "nodemon max.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

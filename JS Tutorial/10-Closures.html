@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        /*
+       * What Are Closures
+
+           a closure gives you access to an outer function’s scope from an inner function.
+
+           Closures are used to persists data without having to define variables in the global scope,
+
+           
+        */
+        // an example on persisting data without using closures (using global variables)
+        let lightSwitch = "OFF";
+
+        const toggleLight = function () {
+            if (lightSwitch === "OFF") {
+                lightSwitch = "ON";
+                return "the light is " + lightSwitch;
+            } else {
+                lightSwitch = "OFF";
+                return "the light is " + lightSwitch;
+            }
+        };
+        // above we have a function that toggles a global variable between ON and OFF, what if we had multiple functions that are
+        // controlling other light switches they all would be using the same variable and that would result in mess so it solve that we could use closures
+
+
+        //1-example..............       
+        const toggle = function () {
+            let lightSwitch = "OFF";
+
+            // this anonymous function is a closure function that has access to it is own closure variable
+            return function () {
+                if (lightSwitch === "OFF") {
+                    lightSwitch = "ON";
+                    return "the light is " + lightSwitch;
+                } else {
+                    lightSwitch = "OFF";
+                    return "the light is " + lightSwitch;
+                }
+            };
+        };
+
+        // the variable will be equal to the return value of toggle so it will be equal to the closure function
+        const toggleLight1 = toggle();
+        // we need a second invocation to be able to invoke the closure function
+        toggleLight1(); // => 'the light is ON'
+        toggleLight1(); // => 'the light is OFF'
+        toggleLight1(); // => 'the light is ON'
+        // we can create another variable to control another light
+        const toggleLight2 = toggle();
+        toggleLight2(); // => 'the light is ON'
+        toggleLight2(); // => 'the light is OFF'
+        toggleLight1(); // => 'the light is OFF'
+        // now we have a persisted data without using a global variable
+
+
+        //2-example .............
+        const employee = function (name, position, salary) {
+            const empName = name;
+            let currentPosition = position;
+            let empSalary = salary;
+
+            return {
+                promote: function (newPosition, newSalary) {
+                    currentPosition = newPosition;
+                    empSalary = newSalary;
+                    return empName + " has been promoted";
+                },
+                getInformation: function () {
+                    return "name: " + empName + "\n position: " + currentPosition + "\n salary: " + empSalary;
+                },
+            };
+        };
+
+        const employee1 = employee("John", "Junior Developer", 1000);
+        // as you can see below the employee information are hidden
+        employee1; // => {promote: ƒ, getInformation: ƒ}
+        // access the the method using dot notation and invoke the method
+        employee1.getInformation(); // => name: John
+        // => position: Junior Developer
+        // => salary: 1000
+        employee1.promote("Senior Developer", 2500); // John has been promoted
+        employee1.getInformation(); // => name: John
+        // => position: Senior Developer
+        // => salary: 2500
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

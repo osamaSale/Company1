@@ -1,0 +1,11 @@
+{
+  "name": "7--find-sum-diagonal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Find Diagonal.js",
+  "scripts": {
+    "dev": "nodemon Find Diagonal.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

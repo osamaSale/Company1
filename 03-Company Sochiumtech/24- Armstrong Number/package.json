@@ -1,0 +1,11 @@
+{
+  "name": "24--armstrong-number",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Armstrong number.js",
+  "scripts": {
+    "dev": "nodemon Armstrong number.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

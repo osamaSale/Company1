@@ -1,0 +1,11 @@
+{
+  "name": "26--curly-brackets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "curlyBrackets.js",
+  "scripts": {
+    "dev": "nodemon curlyBrackets.js "
+  },
+  "author": "",
+  "license": "ISC"
+}

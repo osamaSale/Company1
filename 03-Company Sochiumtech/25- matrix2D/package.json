@@ -1,0 +1,11 @@
+{
+  "name": "10--matrix2d",
+  "version": "1.0.0",
+  "description": "",
+  "main": "matrix2D.js",
+  "scripts": {
+    "dev": "nodemon matrix2D.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

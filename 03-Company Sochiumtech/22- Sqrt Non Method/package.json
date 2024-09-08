@@ -1,0 +1,11 @@
+{
+  "name": "22--sqrt-non-method",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sqrtNonMethod.js",
+  "scripts": {
+    "dev": "nodemon sqrtNonMethod.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "13--even-and-odd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "evenAndOdd.js",
+  "scripts": {
+    "dev": "nodemon evenAndOdd.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

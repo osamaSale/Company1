@@ -1,0 +1,11 @@
+{
+  "name": "5--swap-value",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Swap.js",
+  "scripts": {
+    "dev": "nodemon Swap.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

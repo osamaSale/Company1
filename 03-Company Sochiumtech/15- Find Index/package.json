@@ -1,0 +1,11 @@
+{
+  "name": "15--find-index",
+  "version": "1.0.0",
+  "description": "",
+  "main": "findIndex.js",
+  "scripts": {
+    "dev": "nodemon findindex.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

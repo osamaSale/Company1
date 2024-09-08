@@ -1,0 +1,11 @@
+{
+  "name": "6--find-first-duplicate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "findFirstDuplicate.js",
+  "scripts": {
+    "dev": "nodemon findFirstDuplicate.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

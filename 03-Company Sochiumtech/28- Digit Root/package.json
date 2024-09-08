@@ -1,0 +1,11 @@
+{
+  "name": "20--digit-root",
+  "version": "1.0.0",
+  "description": "",
+  "main": "digit root.js",
+  "scripts": {
+    "dev": "nodemon digit root.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

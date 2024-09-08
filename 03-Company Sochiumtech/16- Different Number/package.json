@@ -1,0 +1,11 @@
+{
+  "name": "16--different-number",
+  "version": "1.0.0",
+  "description": "",
+  "main": "different number.js",
+  "scripts": {
+    "dev": "nodemon different number.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

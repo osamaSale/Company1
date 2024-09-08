@@ -1,0 +1,11 @@
+{
+  "name": "1-count-character",
+  "version": "1.0.0",
+  "description": "",
+  "main": "countCharacter.js",
+  "scripts": {
+    "dev": "nodemon countCharacter.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

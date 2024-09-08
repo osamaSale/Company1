@@ -1,0 +1,11 @@
+{
+  "name": "21--reverse-number-calculate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "reverseNumberCalculate.js",
+  "scripts": {
+    "dev": "nodemon reverseNumberCalculate.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

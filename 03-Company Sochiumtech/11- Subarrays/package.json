@@ -1,0 +1,11 @@
+{
+  "name": "4--subarrays",
+  "version": "1.0.0",
+  "main": "Subarrays.js",
+  "scripts": {
+    "dev": "nodemon Subarrays.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

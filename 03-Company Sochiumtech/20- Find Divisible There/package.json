@@ -1,0 +1,11 @@
+{
+  "name": "19--find-divisible-there",
+  "version": "1.0.0",
+  "description": "",
+  "main": "findDivisibleThere.js",
+  "scripts": {
+    "dev": "nodemon findDivisibleThere.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

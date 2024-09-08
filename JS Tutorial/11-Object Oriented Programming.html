@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        /*
+        What Is OOP
+          Object-oriented programming is based on the concept of "objects", 
+          which can contain data, often known as attributes or properties, and code, 
+          in the form of procedures often known as methods.
+        */
+
+        // 1- exmple
+        const employee = function (name, position, salary) {
+            const emp = {};
+
+            // add all variables along side methods as key value pairs in the emp object
+            emp.name = name;
+            emp.position = position;
+            emp.salary = salary;
+
+            // we took the function definition outside so we do not have to redeclare the same functions every time a new object is
+            // instantiated unlike how it happens when using closure methods.
+            emp.promote = promote;
+            emp.getInformation = getInformation;
+
+            // returns an object that represents an employee
+            return emp;
+        };
+
+        const promote = function (newPosition, newSalary) {
+            // the keyword `this` refers to the object that is calling this method usually the object on the left of
+            // the dot, more explanation in the next example
+            this.position = newPosition;
+            this.salary = newSalary;
+            return this.name + " has been promoted";
+        };
+
+        const getInformation = function () {
+            return "name: " + this.name + "\n position: " + this.position + "\n salary: " + this.salary;
+        };
+
+        const emp1 = employee("John", "Junior developer", 1000);
+        // since the keyword `this` is inside getInformation and when invoked the object of the left of the dot is emp1 then it will refer
+        // to emp1 and be able to get it's attributes
+        emp1.getInformation(); // => name: John
+        // => position: Junior developer
+        // => salary: 1000
+
+
+
+       // Examples on keyword this
+
+        // in the console try to the following
+        this;
+        // when used in the console `this` will refer to the Window object and that holds the globals scope and built in methods and more
+        const someVar = this;
+        const someFunc = function () {
+            return this;
+        };
+
+        const anotherFunc = function () {
+            setTimeout(function () {
+                console.log(this);
+            }, 1000);
+        };
+
+        const obj = {
+            a: this,
+            b: someVar,
+            c: someFunc,
+            d: anotherFunc,
+        };
+        // both values would refer to the window object
+        obj.a;
+        obj.b;
+
+        // invoking some func will return the window object
+        someFunc();
+
+        // invoking someFunc by an object will result in `this` to refer to the object it self
+        obj.c();
+
+        // inside setTimeOut `this` would refer to the window object
+        // any callback function will return the window object
+        obj.d();
+    </script>
+</head>
+
+</html>

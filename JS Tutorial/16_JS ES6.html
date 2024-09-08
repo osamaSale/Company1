@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ============== 1 Variables
+        //  === ECMA 5 ===
+        var t = 1;
+        // block scoped variables
+        if (10 > 5) {
+            var z = 8;
+        }
+        console.log('t:', t);
+        console.log('z:', z);
+
+        //  === ECMA 6 ===
+        // constant variables
+        const x = 10;
+
+        // block scoped variables
+        if (10 > 5) {
+            const a = 1;
+            let b = 2;
+        }
+        if (6 > 5) {
+            const a = 4;
+            let b = 5;
+            console.log(b)
+        }
+        let b = 5;
+        if (7 > 5) {
+            const a = 4;
+            console.log('B: ', b);
+        }
+        console.log('B: ', b);
+        // console.log('a:',a)
+        // console.log('b:',b)
+
+        // ============== 2  Template literals
+        const pFirstName = 'john';
+        const pAge = 20;
+        //  === ECMA 5 ===
+        // concatenation
+        console.log('5: my name is: ' + pFirstName + 'my age is: ' + pAge);
+
+        //  === ECMA 6 ===
+        // string interpolation backtick (``)
+        console.log(`6: my name is: ${pFirstName} my age is: ${pAge}`);
+
+        //  === ECMA 5 ===
+        console.log('5: 1 test\n2 test\n3 test\n4 test');
+
+        //  === ECMA 6 ===
+        console.log(`6: 1 test
+          2 test   
+     3 test
+4 test   `);
+        // ============== 3 Arrow Functions
+
+        //  === ECMA 5 ===
+        const func_5_0 = function () {
+            return 4;
+        };
+        func_5_0(); // => 4
+
+        //  === ECMA 6 ===
+        // const 6_0 = () => 4
+        const func_6_0 = () => {
+            return 4;
+        };
+        func_6_0(4); // => 4
+
+        //  === ECMA 5 ===
+        const func_5_1 = function (x) {
+            return x;
+        };
+        func_5_1(12); // => 12
+
+        //  === ECMA 6 ===
+        // const 6_1 = x => x
+        const func_6_1 = (x) => {
+            return x;
+        };
+        func_6_1(12); // => 12
+
+        //  === ECMA 5 ===
+        const func_5_2 = function (x, y) {
+            return x + y;
+        };
+        func_5_2(12, 13); // => 25
+
+        //  === ECMA 6 ===
+        // const func_6_2 = (x,y) => x+y
+        const func_6_2 = (x, y) => {
+            return x + y;
+        };
+        func_6_2(12, 13); // => 25
+
+        //  === ECMA 5 ===
+        const func_5_body = function (x, y) {
+            console.log(x);
+            return x + y;
+        };
+        func_5_2(12, 13); // => 25
+
+        //  === ECMA 6 ===
+        const func_6_body = (x, y) => {
+            console.log(x);
+            return x + y;
+        };
+        func_6_2(12, 13); // => 25
+
+        //  === ECMA 5 ===
+        const func_5_no_body = function (x, y) {
+            return x + y;
+        };
+        func_5_no_body(12, 13); // => 25
+
+        //  === ECMA 6 ===
+        const func_6_no_body = (x, y) => x + y;
+        func_6_no_body(12, 13); // => 25
+
+        // ============== 4 Destructuring
+        // ============ array
+        //  === ECMA 5 ===
+        const nums_5 = [5, 7, 11];
+        const nums_0_5 = nums_5[0]; // 5
+        const nums_2_5 = nums_5[2]; // 11
+
+        //  === ECMA 6 ===
+        const nums_6 = [5, 7, 11];
+        const [nums_0_6, , nums_2_6] = nums_6;
+        nums_0_6; // 5
+        nums_2_6; // 11
+
+        //  === ECMA 5 ===
+        const sum_5 = function (arr) {
+            return arr[0] + arr[1] + arr[2];
+        };
+        sum_5(nums_5); // => 23
+
+        //  === ECMA 6 ===
+        const sum_6 = ([arr_0, arr_1, arr_2]) => arr_0 + arr_1 + arr_2;
+        sum_6(nums_6); // => 23
+
+        // ============ object
+        //  === ECMA 5 ===
+        const person_5 = { name: 'Moh', age: 25 };
+        const name_5 = person_5['name']; // 'Moh'
+        const age_5 = person_5['age']; // 25
+
+        //  === ECMA 6 ===
+        const person_6 = { name: 'Moh', age: 25, money: 300, c1_class: 'gamma' };
+        const { name, age } = person_6;
+        // example
+        const intro_es6 = ({ name, age }) =>
+            `my name is: ${name} and I am ${age} years old`;
+        intro_es6(person_6);
+
+        const es6_test_obj = function (obj) {
+            console.log('name: ', obj.name);
+            console.log('age: ', obj.age);
+        };
+        // ============== 5 Default Function Parameters:
+        const es5_test = function (a, b) {
+            console.log('A: ', a);
+            console.log('B: ', b);
+        };
+        //  === ECMA 6 ===
+        const exampleFunction = (a = 10, b = 12) => a + b;
+
+        exampleFunction(1, 2); // => 3
+        exampleFunction(1); // => 13
+        exampleFunction(); // => 22
+
+        // ============== 6 Rest Parameters
+        //  === ECMA 6 ===
+        const exampleFunction = (x, ...y) => x * y.length;
+        exampleFunction(5, 44, 12, 77); // => 5 * [44,12,77].length
+        //                                   5 * 3 = 15
+        exampleFunction(5, 44, 12, 77);
+
+        const rest_par = (x, ...y) => {
+            console.log('X: ', x)
+            console.log('Y: ', y)
+        }
+        rest_par(5, 44, 12, 77);
+// ============== 7 Spread Operator
+//  === ECMA 5 ===
+
+//  === ECMA 6 ===
+// ============== 8 Class
+//  === ECMA 5 ===
+
+//  === ECMA 6 ===
+
+// ES6 (7 Spread Operator + 8 Classes)
+// Git
+// Project 1  => Think about an idea + present it to us + start work on it
+//                                     => accept + feedback
+
+        /*
+        Command Line:
+        1. pwd: Print Working Directory
+        2. cd: Change Director (cd .. || cd folder_name)
+        3. ls: List Files
+        
+        
+        Github + Git
+        Create new repository on GitHub
+        
+        
+        Git Commands:
+        1. Clone: to clone specific repo from Git-Hub
+        git clone repo_url
+        
+        2. Status: to know the current repo status
+        git status
+        
+        3. Add: to add your changes to the staging area
+        git add .
+        
+        4. Commit: to title your changes with a specific message and prepare them to move from the staging area to the repository
+        git commit -m 'title of the changes you did'
+        
+        5. Push: to push you changes to the Git-Hub repo (Online)
+        git push origin master
+        
+        *Git configuration:
+        git config --global user.email "your_email@example.com"
+        git config --global user.name "your_github_username"
+        
+        */
+    </script>
+</body>
+
+</html>

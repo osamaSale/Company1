@@ -1,0 +1,11 @@
+{
+  "name": "8--check-two-string",
+  "version": "1.0.0",
+  "description": "",
+  "main": "checkString.js",
+  "scripts": {
+    "dev": "nodemon checkString.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

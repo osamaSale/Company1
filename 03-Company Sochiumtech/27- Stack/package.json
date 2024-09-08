@@ -1,0 +1,11 @@
+{
+  "name": "27--stack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "stack.js",
+  "scripts": {
+    "dev": "nodemon stack.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

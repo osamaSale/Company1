@@ -1,0 +1,11 @@
+{
+  "name": "5--duplicate-each-other",
+  "version": "1.0.0",
+  "description": "",
+  "main": "duplicateEachOther.js",
+  "scripts": {
+    "dev": "nodemon duplicateEachOther.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
